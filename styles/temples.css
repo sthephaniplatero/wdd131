@@ -19,25 +19,64 @@ body {
     background-color: var(--accent-color);
     color: var(--secondary-color);
     line-height: 1.6;
+    margin-top: 0; /* Asegura que no haya márgenes extra */
+    padding-top: 0; /* Elimina cualquier padding extra */
 }
 
 /* Header */
 header {
     background-color: var(--primary-color);
+    display: grid;
+    grid-gap: 1rem;
     color: #fff;
     text-align: center;
-    padding: 2rem 0;
+    padding: 20px;
     position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer; /* Si es un área interactiva */
 }
 
-header h1 {
-    font-size: 3rem;
-    letter-spacing: 2px;
-    font-weight: bold;
-    color: #fff;
-    text-transform: uppercase;
+header,
+main {
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+nav {
+    background-color: #36454f;
+}
+
+nav ul {
+    list-style: none;
+    display: flex; /* Menú horizontal por defecto */
+    justify-content: center; /* Centra los enlaces en la barra de navegación */
+    padding: 0;
     margin: 0;
 }
+
+nav a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+    font-size: larger;
+}
+
+nav a:hover {
+    text-decoration: underline double;
+    background-color: #eee;
+    color: #000;
+}
+
+.active {
+    color: yellow;
+}
+
 /* Hamburger Menu */
 .menu-icon {
     display: none;
@@ -64,9 +103,10 @@ header h1 {
 
 .top-nav ul {
     list-style-type: none;
-    display: flex; /* Esto hace que los elementos sean horizontales */
+    display: flex; /* Menú horizontal por defecto */
     justify-content: center; /* Centra los enlaces en la barra de navegación */
     padding: 0;
+    margin: 0;
 }
 
 .top-nav li {
@@ -83,21 +123,20 @@ header h1 {
     color: var(--primary-color);
 }
 
-/* Style for hamburguer scream */
-
+/* Estilo para dispositivos móviles */
 @media (max-width: 768px) {
     .menu-icon {
         display: flex; /* Mostrar el icono en pantallas pequeñas */
     }
 
     .top-nav {
-        display: none; /* Ocultar el menú por defecto */
+        display: none; /* Ocultar el menú por defecto en pantallas pequeñas */
         width: 100%;
         text-align: center;
     }
 
     .top-nav ul {
-        flex-direction: column;
+        flex-direction: column; /* Apilar los enlaces en pantallas pequeñas */
         width: 100%;
     }
 
@@ -106,7 +145,7 @@ header h1 {
     }
 
     .top-nav li {
-        margin: 1rem 0;
+        margin: 1rem 0; /* Añadir espacio entre los elementos en vista móvil */
     }
 }
 
@@ -117,12 +156,12 @@ main {
     gap: 20px; 
     max-width: 800px;
     margin: 0 auto;
+    padding: 20px; /* Agregar padding para un buen espaciado */
 }
 
 figure {
     text-align: center; 
 }
-
 
 footer {
     background-color: var(--footer-bg-color);
@@ -133,9 +172,4 @@ footer {
 
 footer p {
     font-size: 1rem;
-}
-
-body {
-    margin-top: 0; /* Asegura que no haya márgenes extra que cubran el encabezado */
-    padding-top: 0; /* Elimina cualquier padding extra que podría estar afectando la visibilidad */
 }

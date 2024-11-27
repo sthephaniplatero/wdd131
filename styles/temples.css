@@ -19,8 +19,8 @@ body {
     background-color: var(--accent-color);
     color: var(--secondary-color);
     line-height: 1.6;
-    margin-top: 0; /* Asegura que no haya márgenes extra */
-    padding-top: 0; /* Elimina cualquier padding extra */
+    margin-top: 0; 
+    padding-top: 0; 
 }
 
 /* Header */
@@ -52,8 +52,8 @@ nav {
 
 nav ul {
     list-style: none;
-    display: flex; /* Menú horizontal por defecto */
-    justify-content: center; /* Centra los enlaces en la barra de navegación */
+    display: flex; 
+    justify-content: center; 
     padding: 0;
     margin: 0;
 }
@@ -103,14 +103,14 @@ nav a:hover {
 
 .top-nav ul {
     list-style-type: none;
-    display: flex; /* Menú horizontal por defecto */
-    justify-content: center; /* Centra los enlaces en la barra de navegación */
+    display: flex; 
+    justify-content: center; 
     padding: 0;
     margin: 0;
 }
 
 .top-nav li {
-    margin: 0 1rem; /* Añade espacio entre los enlaces */
+    margin: 0 1rem; 
 }
 
 .top-nav a {
@@ -126,26 +126,26 @@ nav a:hover {
 /* Estilo para dispositivos móviles */
 @media (max-width: 768px) {
     .menu-icon {
-        display: flex; /* Mostrar el icono en pantallas pequeñas */
+        display: flex; 
     }
 
     .top-nav {
-        display: none; /* Ocultar el menú por defecto en pantallas pequeñas */
+        display: none; 
         width: 100%;
         text-align: center;
     }
 
     .top-nav ul {
-        flex-direction: column; /* Apilar los enlaces en pantallas pequeñas */
+        flex-direction: column; 
         width: 100%;
     }
 
     .top-nav.active {
-        display: block; /* Mostrar el menú cuando se activa */
+        display: block; 
     }
 
     .top-nav li {
-        margin: 1rem 0; /* Añadir espacio entre los elementos en vista móvil */
+        margin: 1rem 0; 
     }
 }
 
@@ -156,7 +156,7 @@ main {
     gap: 20px; 
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px; /* Agregar padding para un buen espaciado */
+    padding: 20px; 
 }
 
 figure {

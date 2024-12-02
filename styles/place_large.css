@@ -1,0 +1,42 @@
+@media (min-width: 769px) {
+    .hero {
+        position: relative; /* Contenedor relativo para las secciones absolutas */
+    }
+
+    section.data, section.weather {
+        position: absolute; /* Permite posicionarlas dentro de .hero */
+        bottom: 10px; /* Ubica las secciones en la parte inferior de la imagen */
+        width: 40%; /* Ajusta el ancho de cada sección */
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.6); /* Fondo negro semitransparente */
+        color: white; /* Texto blanco para contraste */
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+    }
+
+    section.data {
+        left: 5%; /* Coloca la sección `.data` hacia la izquierda */
+    }
+
+    section.weather {
+        right: 5%; /* Coloca la sección `.weather` hacia la derecha */
+    }
+
+    /* Encabezado de las secciones */
+    section h2 {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    /* Texto dentro de las secciones */
+    section p {
+        margin: 10px 0;
+        font-size: 16px;
+    }
+
+    section p strong {
+        color: #ffcc00; /* Color destacado para datos importantes */
+        font-weight: bold;
+    }
+}

@@ -37,6 +37,8 @@ header {
     cursor: pointer; /* Si es un área interactiva */
 }
 
+
+
 header,
 main {
     margin: 0 auto;
@@ -173,3 +175,4 @@ footer {
 footer p {
     font-size: 1rem;
 }
+

@@ -7,19 +7,18 @@
     <meta name="author" content="Sthephani Platero">
     <meta name="description" content="Product review form project to demonstrate HTML, CSS, and JavaScript.">
 
-    
     <link rel="stylesheet" href="styles/form.css">
 </head>
 <body>
 
     <h1>Product Review</h1>
 
-    <form method="POST" action="review.html" class="wf1" onsubmit="incrementReviewCount()">
+    <form method="GET" action="review.html" class="wf1" onsubmit="incrementReviewCount(event)">
         <fieldset>
             <legend>Product Name</legend>
             <select id="subject" name="subject" required>
                 <option value="" disabled selected>Choose a Product &#9662; </option>
-                
+                <!-- Aquí agregarías las opciones del producto -->
             </select>
         </fieldset>
 
@@ -77,13 +76,6 @@
 
     <!-- Scripts -->
     <script src="scripts/form.js"></script>
-    <script>
-        function incrementReviewCount() {
-            let reviewCount = parseInt(localStorage.getItem('reviewCount')) || 0;
-            reviewCount++;
-            localStorage.setItem('reviewCount', reviewCount);
-        }
-    </script>
 
 </body>
 </html>

@@ -8,11 +8,20 @@ const products = [
 
 // Populate the select dropdown
 document.addEventListener("DOMContentLoaded", () => {
-    const productSelect = document.getElementById("subject"); // Match the id in the HTML
+    const productSelect = document.getElementById("subject"); 
     products.forEach(product => {
         const option = document.createElement("option");
-        option.value = product.id; // Use the product id as the value
-        option.textContent = product.name; // Use the product name for display
+        option.value = product.id; 
+        option.textContent = product.name; 
         productSelect.appendChild(option);
     });
 });
+
+function incrementReviewCount(event) {
+    event.preventDefault();  
+
+    let reviewCount = parseInt(localStorage.getItem('reviewCount')) || 0;
+    localStorage.setItem('reviewCount', reviewCount + 1);  
+
+    window.location.href = 'review.html';  
+}

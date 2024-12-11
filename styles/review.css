@@ -3,14 +3,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9; /* Fondo suave para la página */
+    background-color: #f4f4f9; 
     text-align: center;
     color: #333;
 }
 
 h1 {
-    color: #007bff; /* Color azul para el título */
-    margin-top: 50px;
+    color: #007bff; 
     font-size: 2rem;
 }
 
@@ -22,12 +21,12 @@ p {
 .reviews-count {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #28a745; /* Verde para destacar el número de revisiones */
+    color: #28a745; 
 }
 
 button {
     padding: 10px 20px;
-    background-color: #dc3545; /* Rojo para el botón */
+    background-color: #dc3545; 
     color: white;
     font-size: 1rem;
     border: none;
@@ -46,7 +45,7 @@ footer {
     color: #777;
 }
 
-/* Estilo para el footer */
+/*  footer */
 footer p {
     margin: 5px 0;
 }

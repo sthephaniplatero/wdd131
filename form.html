@@ -7,7 +7,7 @@
     <meta name="author" content="Sthephani Platero">
     <meta name="description" content="Product review form project to demonstrate HTML, CSS, and JavaScript.">
 
-    <!-- Estilos -->
+    
     <link rel="stylesheet" href="styles/form.css">
 </head>
 <body>
@@ -19,7 +19,7 @@
             <legend>Product Name</legend>
             <select id="subject" name="subject" required>
                 <option value="" disabled selected>Choose a Product &#9662; </option>
-                <!-- Aquí se llenarán los productos dinámicamente -->
+                
             </select>
         </fieldset>
 
@@ -78,9 +78,7 @@
     <!-- Scripts -->
     <script src="scripts/form.js"></script>
     <script>
-        // Función para incrementar el contador de revisiones al enviar el formulario
         function incrementReviewCount() {
-            // Incrementa el contador de revisiones en localStorage
             let reviewCount = parseInt(localStorage.getItem('reviewCount')) || 0;
             reviewCount++;
             localStorage.setItem('reviewCount', reviewCount);

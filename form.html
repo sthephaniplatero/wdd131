@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Review form by Sthephani Platero</title>
+    <title>Product Review Form</title>
     <meta name="author" content="Sthephani Platero">
     <meta name="description" content="Product review form project to demonstrate HTML, CSS, and JavaScript.">
 
-    <!-- STYLE SHEETS -->
+    <!-- Estilos -->
     <link rel="stylesheet" href="styles/form.css">
-    <link rel="stylesheet" href="styles/form-large.css">
 </head>
 <body>
 
     <h1>Product Review</h1>
 
-    <form method="get" action="review.html" class="wf1">
+    <form method="POST" action="review.html" class="wf1" onsubmit="incrementReviewCount()">
         <fieldset>
             <legend>Product Name</legend>
             <select id="subject" name="subject" required>
                 <option value="" disabled selected>Choose a Product &#9662; </option>
+                <!-- Aquí se llenarán los productos dinámicamente -->
             </select>
         </fieldset>
 
@@ -75,7 +75,17 @@
         <p>&copy;2024 | Sthephani Yamileth Platero | El Salvador</p>
     </footer>
 
+    <!-- Scripts -->
     <script src="scripts/form.js"></script>
+    <script>
+        // Función para incrementar el contador de revisiones al enviar el formulario
+        function incrementReviewCount() {
+            // Incrementa el contador de revisiones en localStorage
+            let reviewCount = parseInt(localStorage.getItem('reviewCount')) || 0;
+            reviewCount++;
+            localStorage.setItem('reviewCount', reviewCount);
+        }
+    </script>
 
 </body>
 </html>

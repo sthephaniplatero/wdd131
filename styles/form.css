@@ -3,28 +3,31 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('../images/back.jpeg');
-    background-size: cover; /* Hace que la imagen cubra toda la pantalla */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-attachment: fixed; /* Hace que la imagen se mantenga fija al hacer scroll */
-    color: #333; /* Color del texto para buena legibilidad */
+    background-image: url('../images/back.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    color: #333; 
 }
 
+h1 {
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+    font-size: 2rem;
+}
+
+/* Form Styling */
 form {
     width: 90%;
     max-width: 600px;
     margin: 20px auto;
-    background: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente */
+    background: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border: 1px solid #e0e0e0;
-}
-
-h1{
-    text-align: center;
-    color: white;
 }
 
 fieldset {
@@ -37,16 +40,19 @@ legend {
     font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 10px;
+    color: #007bff;
 }
 
 label {
     display: block;
     margin-bottom: 5px;
     font-weight: 600;
+    color: #555;
 }
 
 /* Inputs and Selects */
 input[type="text"],
+input[type="date"],
 select,
 textarea {
     width: 100%;
@@ -61,6 +67,7 @@ textarea {
 }
 
 input[type="text"]:focus,
+input[type="date"]:focus,
 select:focus,
 textarea:focus {
     border-color: #007bff;
@@ -109,23 +116,14 @@ footer {
     margin-top: 20px;
     font-size: 0.9rem;
     color: white;
+    padding: 10px 0;
 }
 
 footer p {
     margin: 5px 0;
 }
 
-/* Responsive Design */
-@media (max-width: 600px) {
-    form {
-        padding: 15px;
-    }
-
-    button {
-        font-size: 0.9rem;
-    }
-}
-
+/* Ratings Styling */
 .rating-row {
     display: flex;
     justify-content: space-between;
@@ -140,4 +138,21 @@ footer p {
 
 .rating-row input[type="radio"] {
     margin-right: 5px;
+}
+
+/* Focus Indicators for Accessibility */
+input:focus, select:focus, textarea:focus, button:focus {
+    outline: 3px solid #007bff;
+    outline-offset: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    form {
+        padding: 15px;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
 }

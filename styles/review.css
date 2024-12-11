@@ -1,0 +1,52 @@
+/* Estilo general de la página de revisión */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9; /* Fondo suave para la página */
+    text-align: center;
+    color: #333;
+}
+
+h1 {
+    color: #007bff; /* Color azul para el título */
+    margin-top: 50px;
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+.reviews-count {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #28a745; /* Verde para destacar el número de revisiones */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #dc3545; /* Rojo para el botón */
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #c82333;
+}
+
+footer {
+    margin-top: 50px;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Estilo para el footer */
+footer p {
+    margin: 5px 0;
+}

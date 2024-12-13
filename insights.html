@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/insights.css">
+  <title>Insights</title>
+</head>
+
+<body>
+  <header>
+    <div class="banner">
+        <img src="images/logo.jpeg" alt="logo">
+        <h1> Brighter <br>Shine again, more calm, less stress!</h1>
+    </div>
+
+    <div class="menu-icon" id="menu-icon">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+
+    <nav class="top-nav" id="top-nav">
+        <ul>
+            <li><a href="brigther.html">Home</a></li>
+            <li><a href="stress.html">Stress-O-Meter</a></li>
+            <li><a href="insights.html">Insights</a></li>
+        </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero-container">
+      <div class="hero-image">
+        <picture>
+          <source media="(max-width: 768px)" srcset="images/level.jpg" />
+          <source media="(min-width: 769px)" srcset="images/level.jpg" />
+          <img src="images/level.jpg" alt="El Salvador" />
+        </picture>
+      </div>
+
+      <div class="form-container">
+        <h1>Share your insights about the results</h1>
+        <form id="insight-form" action="/submit" method="POST">
+            <div class="question">
+                <label for="color">Select the color you obtained in the Stress-O-Meter:</label>
+                <select id="color" name="color">
+                    <option value="rojo">Red</option>
+                    <option value="amarillo">Yellow</option>
+                    <option value="verde">Green</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label for="comments">Comments or actions to take:</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Write here."></textarea>
+            </div>
+
+            <div class="question">
+                <label for="help">If you like to get professional help share your email:</label>
+                <textarea id="help" name="help" rows="4" placeholder="yourname@company.com"></textarea>
+            </div>
+
+            <button type="submit" class="button">Sent</button>
+        </form>
+
+        <div id="success-message" class="hidden">
+          <p>Thank you for your submission! Your insights have been successfully sent.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy;2024 | Sthephani Yamileth Platero | El Salvador</p>
+    <p>Last Modification: <span id="date-modification"></span></p>
+  </footer>
+
+  <script src="scripts/insights.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variable for colors */
+:root {
+    --primary-color: #213346; /* Color principal */
+    --secondary-color: white;  /* Color de texto */
+    --accent-color: #ddd5cf;  /* Fondo principal */
+    --highlight-color: #ffcc00; /* Fondo de tarjetas */
+    --footer-bg-color: #282828; /* Color de fondo del pie de página */
+}
+
+/* Body Style */
+body {
+    font-family: " Script ", Serif ;
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    line-height: 1.6;
+    margin-top: 0; 
+    padding-top: 0; 
+}
+
+
+.banner {
+    text-align: center;
+    padding: 15px;
+    background-color:#213346;
+}
+
+.banner img {
+    width: 150px; 
+    height: auto; 
+}
+
+.banner h1 {
+    font-size: 25px; 
+    margin-top: px;
+    color:white
+}
+
+
+
+
+nav {
+    background-color: #36454f;
+}
+
+nav ul {
+    list-style: none;
+    display: flex; 
+    justify-content: center; 
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+    font-size:10px;
+}
+
+nav a:hover {
+    text-decoration: underline double;
+    background-color: #eee;
+    color: #000;
+}
+
+.active {
+    color: yellow;
+}
+
+/* Hamburger Menu */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bar {
+    width: 100%;
+    height: 5px;
+    background-color: #80eb4bc7;
+    border-radius: 10px;
+}
+
+/* Top navigation bar */
+.top-nav {
+    background-color: #84e951c8;
+    
+    padding: 1rem 0;
+}
+
+.top-nav ul {
+    list-style-type: none;
+    display: flex; 
+    justify-content: center; 
+    padding: 0;
+    margin: 0;
+}
+
+.top-nav li {
+    margin: 0 1rem; 
+}
+
+.top-nav a {
+    color: #36454f;
+    font-size: 25px;
+}
+
+.top-nav a:hover {
+    color: #36454f;
+    
+}
+
+
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 20px;
+  }
+
+
+section h2 {
+    font-size: 30px;
+    background-color: #213346;
+    padding: 15px;
+    color: white;
+    text-align: center;
+    
+}
+
+section.data p, section.weather p {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    
+}
+
+
+
+section.intro {
+    font-size: 20px;
+    background-color: #213346;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 0 20px #e0f7fa;
+    border: 5px solid #ffcc00;
+    
+    
+}
+
+
+
+footer {
+    background-color: #213346;
+    color: #fff;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1rem;
+}

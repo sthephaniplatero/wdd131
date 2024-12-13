@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brighter</title>
+    <meta name="author" content="Sthephani Platero" />
+    <meta
+    name="description"
+    content="This is a project to apply the concepts develop responsive web pages that follow best practices and use valid HTML and CSS,
+    demonstrate proficiency with JavaScript language syntax, use JavaScript to respond to events and dynamically modify HTML, use JavaScript 
+    to respond to events and dynamically modify HTML." />
+    <link rel="stylesheet" href="styles/brighter.css">
+    <link rel="stylesheet" href="styles/brighter_large.css">
+</head>
+<body>
+
+    <header>
+        <div class="banner">
+            <img src="images/logo.jpeg" alt="logo">
+            <h1> Brighter <br>Shine again, more calm, less stress!</h1>
+        </div>
+
+        <div class="menu-icon" id="menu-icon">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <nav class="top-nav" id="top-nav">
+            <ul>
+                <li><a href="brigther.html">Home</a></li>
+                <li><a href="stress.html">Stress-O-Meter</a></li>
+                <li><a href="insights.html">Insights</a></li>
+
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+        <div class="hero">
+            <picture>
+                <source media="(max-width: 768px)" srcset="images/small.webp" />
+                <source media="(min-width: 769px)" srcset="images/woman_large.jpg" />
+                <img src="images/woman_large.jpg" alt="mental health" />
+            </picture>
+        </div>
+
+        <section class="intro">
+            <p>PEACE...isn't that what we all seek in our daily lives?
+                In a world where responsibilities like work, studies,
+                family, and our own expectations surround us, everything 
+                keeps moving faster and faster, and that small word gets 
+                crushed by a bigger one that grows every day: stress.
+                Do you feel like your light has gone out and you don't know what to do?
+                Check your stress level here and get practical tips to reclaim the peace 
+                we all need, so you can shine BRIGHTER once again.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;2024 | Sthephani Yamileth Platero | El Salvador</p>
+        <p>Last Modification: <span id="date-modification"></span></p>
+    </footer>
+
+    <script src="scripts/brighter.js"></script>
+    <script src="scripts/getdates.js"></script>
+    
+</body>
+</html>

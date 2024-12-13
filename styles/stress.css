@@ -1,0 +1,252 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables para colores */
+:root {
+    --primary-color: #213346; /* Color principal */
+    --secondary-color: black; /* Color de texto */
+    --accent-color: #ddd5cf; /* Fondo principal */
+    --highlight-color: #ffcc00; /* Fondo de tarjetas */
+    --footer-bg-color: #282828; /* Fondo del pie de página */
+    --button-hover-color: #0056b3; /* Hover para botones */
+    --button-bg-color: #007bff; /* Fondo de botones */
+}
+
+/* Estilo del Body */
+body {
+    font-family: "Arial", sans-serif;
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Banner */
+.banner {
+    text-align: center;
+    padding: 15px;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.banner img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.banner h1 {
+    font-size: 25px;
+    color: white;
+}
+
+/* Navegación */
+nav {
+    background-color: #80eb4bc7;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav a:hover {
+    text-decoration: underline double;
+    background-color: #eee;
+    color: #000;
+}
+
+.active {
+    color: yellow;
+}
+
+/* Menú Hamburguesa */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bar {
+    width: 100%;
+    height: 5px;
+    background-color: #80eb4bc7;
+    border-radius: 10px;
+}
+
+/* Contenedor Principal */
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* Encabezado */
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+}
+
+/* Preguntas */
+.question {
+    margin-bottom: 10px;
+}
+
+/* Botones */
+.button {
+    background-color: #ffcc00;
+    color: var(--secondary-color);
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
+.button:hover {
+    background-color: var(--button-hover-color);
+}
+
+/* Resultado */
+.result {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+
+    .banner img {
+        width: 100px;
+    }
+}
+
+footer {
+    background-color: #213346;
+    color: #fff;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Contenedor del termómetro */
+.stress-meter-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.thermometer {
+    width: 100%;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.fill {
+    width: 0%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+#stress-level {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Centrado del Contenido Principal */
+.main-content {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    flex-wrap: wrap; /* Permite que los elementos se apilen si no hay espacio suficiente */
+    gap: 10px; /* Espacio reducido entre la imagen y el contenedor */
+    padding: 10px; /* Relleno reducido para ajustar el contenido */
+    margin: 0 auto; /* Centra el contenido principal */
+    max-width: 1200px; /* Ancho máximo del contenido */
+    height: auto; /* Se ajusta dinámicamente según el contenido */
+}
+
+/* Imagen lateral */
+.side-image {
+    flex-shrink: 0; /* Evita que la imagen se reduzca demasiado */
+    max-width: 250px; /* Tamaño máximo reducido para la imagen */
+    width: 100%; /* Asegura que se adapte a pantallas pequeñas */
+    height: auto;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar la imagen */
+}
+
+/* Contenedor Principal */
+.container {
+    flex: 1; /* Permite que el contenedor ocupe más espacio */
+    max-width: 500px; /* Ancho máximo del contenedor reducido */
+    margin: 0; /* Espacio eliminado entre el contenedor y otros elementos */
+    padding: 15px; /* Relleno reducido */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column; /* Apila los elementos verticalmente */
+        gap: 15px; /* Espacio más uniforme en dispositivos pequeños */
+    }
+
+    .side-image {
+        max-width: 100%; /* Imagen ocupa el ancho completo */
+    }
+
+    .container {
+        max-width: 100%; /* Contenedor ocupa todo el ancho */
+    }
+}

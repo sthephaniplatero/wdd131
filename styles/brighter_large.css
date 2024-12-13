@@ -1,0 +1,33 @@
+@media (min-width: 769px) {
+    .hero {
+        position: relative;
+    }
+
+    section.intro {
+        position: absolute;
+        bottom: 10px;
+        left: 5%;
+        width: 40%; 
+        padding: 30px;
+        background-color: #213346;
+        color: #ffffff; 
+        border-radius: 10px; 
+        border: 5px solid #ffcc00; /* Borde dorado para un toque elegante */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra sutil para profundidad */
+        font-family: 'Helvetica Neue', sans-serif;
+        font-weight: 300;
+        text-align: left; 
+        transform: translateY(30px);
+    }
+
+    section p {
+        margin: 15px 0;
+        font-size: 18px;
+        line-height: 1.8;
+    }
+
+    section p strong {
+        color: #ffcc00; 
+        font-weight: bold;
+    }
+}

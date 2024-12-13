@@ -3,162 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Estrésómetro</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-    .container {
-      background-color: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      width: 100%;
-      max-width: 600px;
-    }
-    h1 {
-      text-align: center;
-    }
-    .question {
-      margin-bottom: 10px;
-    }
-    .button {
-      background-color: #007bff;
-      color: white;
-      padding: 10px 20px;
-      margin: 10px;
-      border: none;
-      cursor: pointer;
-      font-size: 16px;
-      border-radius: 5px;
-    }
-    .button:hover {
-      background-color: #0056b3;
-    }
-    .result {
-      text-align: center;
-      font-size: 20px;
-      margin-top: 20px;
-    }
-    .hidden {
-      display: none;
-    }
-  </style>
+  <link rel="stylesheet" href="styles/stress.css">
+  <title>Stress-O-Meter</title>
 </head>
+
 <body>
+  <header>
+    <div class="banner">
+      <img src="images/logo.jpeg" alt="logo">
+      <h1>Brighter <br>Shine again, more calm, less stress!</h1>
+    </div>
 
-<div class="container">
-  <h1>Test de Estrés</h1>
-  <form id="stressForm">
-    <div id="question-container"></div>
-    <button type="button" class="button" id="next-button" onclick="nextQuestion()">Siguiente</button>
-  </form>
-  <div id="result" class="result hidden"></div>
-</div>
+    <div class="menu-icon" id="menu-icon">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
 
-<script>
-  // Lista de preguntas y sus respuestas posibles
-  const questions = [
-    { question: "¿Te sientes agotado(a)?", answers: ["Nunca", "Rara vez", "A menudo", "Siempre"] },
-    { question: "¿Tienes dificultades para dormir?", answers: ["Nunca", "Rara vez", "A menudo", "Siempre"] },
-    { question: "¿Te sientes ansioso(a) por el futuro?", answers: ["Nunca", "Rara vez", "A menudo", "Siempre"] },
-    { question: "¿Sientes presión por el trabajo o estudios?", answers: ["Nunca", "Rara vez", "A menudo", "Siempre"] },
-    { question: "¿Te irritas fácilmente?", answers: ["Nunca", "Rara vez", "A menudo", "Siempre"] },
-    { question: "¿Te duele la cabeza con frecuencia?", answers: ["Nunca", "Rara vez", "A menudo", "Siempre"] },
-    { question: "¿Te sientes frustrado(a) sin razón aparente?", answers: ["Nunca", "Rara vez", "A menudo", "Siempre"] },
-    { question: "¿Tienes dificultades para concentrarte?", answers: ["Nunca", "Rara vez", "A menudo", "Siempre"] },
-    { question: "¿Sientes que no tienes tiempo para ti mismo(a)?", answers: ["Nunca", "Rara vez", "A menudo", "Siempre"] },
-    { question: "¿Te cuesta relajarte?", answers: ["Nunca", "Rara vez", "A menudo", "Siempre"] },
-    { question: "¿Te sientes sobrepasado(a) por tus responsabilidades?", answers: ["Nunca", "Rara vez", "A menudo", "Siempre"] },
-    { question: "¿Tienes problemas de digestión frecuentes?", answers: ["Nunca", "Rara vez", "A menudo", "Siempre"] },
-    { question: "¿Te resulta difícil tomar decisiones?", answers: ["Nunca", "Rara vez", "A menudo", "Siempre"] },
-    { question: "¿Te sientes desconectado(a) de tus emociones?", answers: ["Nunca", "Rara vez", "A menudo", "Siempre"] },
-    { question: "¿Estás preocupado(a) por tu salud?", answers: ["Nunca", "Rara vez", "A menudo", "Siempre"] },
-    { question: "¿Te sientes muy cansado(a) incluso después de descansar?", answers: ["Nunca", "Rara vez", "A menudo", "Siempre"] },
-    { question: "¿Tienes dificultades para relajarte incluso durante el tiempo libre?", answers: ["Nunca", "Rara vez", "A menudo", "Siempre"] },
-    { question: "¿Te resulta difícil disfrutar de las cosas que antes te gustaban?", answers: ["Nunca", "Rara vez", "A menudo", "Siempre"] },
-    { question: "¿Te has sentido emocionalmente agotado(a) en las últimas semanas?", answers: ["Nunca", "Rara vez", "A menudo", "Siempre"] },
-    { question: "¿Te sientes nervioso(a) incluso sin razón clara?", answers: ["Nunca", "Rara vez", "A menudo", "Siempre"] },
-    { question: "¿Te resulta difícil hablar sobre tus preocupaciones?", answers: ["Nunca", "Rara vez", "A menudo", "Siempre"] },
-    { question: "¿Tienes dificultades para desconectar del trabajo o estudio?", answers: ["Nunca", "Rara vez", "A menudo", "Siempre"] },
-  ];
+    <nav class="top-nav" id="top-nav">
+      <ul>
+        <li><a href="brigther.html">Home</a></li>
+        <li><a href="stress.html">Stress-O-Meter</a></li>
+        <li><a href="insights.html">Insights</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  let userResponses = [];
-  let currentQuestionIndex = 0;
+  <main>
+    <div class="main-content">
+      <div class="container">
+        <h1>Stress-O-Meter</h1>
+        <form id="stressForm">
+          <div id="question-container"></div>
+          <button type="button" class="button" id="next-button" onclick="nextQuestion()">Next Question</button>
+        </form>
 
-  // Función para mostrar la pregunta actual
-  function displayQuestion() {
-    const questionContainer = document.getElementById('question-container');
-    const question = questions[currentQuestionIndex];
+        <div id="result" class="result hidden"></div>
+        <div id="thermometer" class="thermometer hidden">
+          <div id="fill" class="fill"></div>
+        </div>
 
-    questionContainer.innerHTML = `
-      <p>${question.question}</p>
-      <div>
-        ${question.answers.map((answer, index) => `
-          <label>
-            <input type="radio" name="question${currentQuestionIndex}" value="${index}" onclick="storeAnswer(${index})">
-            ${answer}
-          </label><br>
-        `).join('')}
-      </div>
-    `;
-  }
+        
+  </main>
 
-  // Función para almacenar la respuesta
-  function storeAnswer(answerIndex) {
-    userResponses[currentQuestionIndex] = answerIndex;
-  }
+  <footer>
+    <p>&copy;2024 | Sthephani Yamileth Platero | El Salvador</p>
+    <p>Last Modification: <span id="date-modification"></span></p>
+  </footer>
 
-  // Función para avanzar a la siguiente pregunta
-  function nextQuestion() {
-    if (userResponses[currentQuestionIndex] === undefined) {
-      alert("Por favor, responde la pregunta antes de continuar.");
-      return;
-    }
-
-    currentQuestionIndex++;
-
-    if (currentQuestionIndex < questions.length) {
-      displayQuestion();
-    } else {
-      calculateStress();
-    }
-  }
-
-  // Función para calcular el nivel de estrés
-  function calculateStress() {
-    let score = userResponses.reduce((sum, answer) => sum + answer, 0);
-    let stressLevel = '';
-    let stressColor = '';
-
-    if (score <= 30) {
-      stressLevel = 'Bajo';
-      stressColor = 'green';
-    } else if (score <= 50) {
-      stressLevel = 'Moderado';
-      stressColor = 'orange';
-    } else {
-      stressLevel = 'Alto';
-      stressColor = 'red';
-    }
-
-    document.getElementById('result').classList.remove('hidden');
-    document.getElementById('result').innerHTML = `
-      <p>Tu nivel de estrés es: <span style="color: ${stressColor};">${stressLevel}</span></p>
-    `;
-    document.getElementById('next-button').style.display = 'none'; // Ocultar el botón de siguiente
-  }
-
-  // Inicializar la primera pregunta
-  window.onload = displayQuestion;
-
-</script>
-
+  <script src="scripts/stress.js"></script>
 </body>
 </html>
